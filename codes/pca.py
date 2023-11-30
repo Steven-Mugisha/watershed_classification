@@ -1,20 +1,15 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-from dotenv import load_dotenv
-import os
 import plotly.express as px
-from collections import Counter
 
 
 class PCA_Analysis:
     def _perform_pca(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Private method to perform PCA analysis on the dataframe
-        and return the dataframe with the PCA components
+            Private method to perform PCA analysis on the dataframe
+            and return the dataframe with the PCA components
         """
         scaler = StandardScaler()
         scaled_df = scaler.fit_transform(df)
@@ -25,14 +20,14 @@ class PCA_Analysis:
 
     def pca_analysis(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        This function performs PCA analysis on the dataframe
-        and returns the dataframe with the PCA components
+            This function performs PCA analysis on the dataframe
+            and returns the dataframe with the PCA components
         """
         return self._perform_pca(df)[0]
 
     def loadings(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        This function returns the loadings for the PCA components
+            This function returns the loadings for the PCA components
         """
         pca = self._perform_pca(df)[1]
 
@@ -44,7 +39,7 @@ class PCA_Analysis:
 
     def top_attributes(self, loadings: pd.DataFrame, n: int) -> list:
         """
-        This function returns the top n components
+            This function returns the top n components
         """
         top_attributes_pc1 = loadings["PC1"].abs().sort_values(ascending=False)
         top_attributes_pc2 = loadings["PC2"].abs().sort_values(ascending=False)
@@ -60,7 +55,7 @@ class PCA_Analysis:
 
     def explained_variance(self, df) -> pd.DataFrame:
         """
-        This function returns the explained variance for the PCA components
+            This function returns the explained variance for the PCA components
         """
 
         pca = self._perform_pca(df)[1]
@@ -82,7 +77,7 @@ class PCA_Analysis:
 
     def pca_plot(self, df: pd.DataFrame) -> None:
         """
-        This function plots the PCA components
+            This function plots the PCA components
         """
 
         fig = px.bar(
