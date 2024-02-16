@@ -1,6 +1,0 @@
-soil_PC1_0.49,soil_PC2_0.2,surficial_PC1_0.21,surficial_PC2_0.19,lulcstats_PC1_0.42,lulcstats_PC2_0.18,terrain_PC1_0.63,terrain_PC2_0.22
-std_topsoil_sand,std_topsoil_clay,Ground moraine,Alluvium,%cropland,%forest,max_elevation,median_elevation
-median_topsoil_sand,median_topsoil_sand,Lacustrine,Kames and esker,%grassland,%grassland,range_elevation,mean_elevation
-std_topsoil_silt,median_topsoil_silt,End moraine,End moraine,%wetland,%water,std_elevation,max_slope
-median_topsoil_silt,median_soil_depth,Alluvium,Ground moraine,%water,%urban,mean_elevation,range_elevation
-std_topsoil_clay,std_topsoil_silt,Outwash and dunes,Lacustrine,%urban,%wetland,median_elevation,std_elevation

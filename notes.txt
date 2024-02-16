@@ -1,8 +1,0 @@
-
-libraries:
-
-- netcdf4 (three-dimensionla datasets: time x latitude x longitude)
-
-Calculating the indices from netCDF data
-
-....... will pick the median values then .....
